@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>
+Event Propogation
+</title>
+<style>
+
+</style>
+</head>
+<body>
+<form name="myForm" action="" onsubmit="return checkInp()">
+<label for="number">Enter Number</label>
+<input type="text" id="number"></br></br>
+
+<label for="result">Result</label>
+<input type="text" id="result"></br></br>
+
+<input class="button" type="submit" value="Check">
+
+
+
+</form>
+</body>
+<script>
+
+
+function checkInp()
+{
+  var x=document.forms["myForm"]["number"].value;
+  var y=document.forms["myForm"]["result"];
+  if (isNaN(x)) 
+  {
+    y.value=false;
+    return false;
+  }
+  else {
+  y.value=true;
+  return true;
+  }
+}
+
+</script>
+</html>
