@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title> Exercise - JavaScript </title> 
+
+<style>
+#one{
+    width:400px;
+    height:100px;
+    overflow:scroll;
+    text-align:left;
+    margin-left:430px;
+    margin-top: 90px;
+    border:solid 2px;
+        }
+</style>
+
+    </head>
+    
+    <body>
+    <h2> JavaScript - Exercise </h2>
+    <p>Create a div with height 100 and scroll bars. Display a list of checkbox color, drinks, movies and bikes in this div.<br/><br/>
+    Now when you click on color checkbox it should display four checkboxes(red, yellow, green, blue) as a child list and color checkbox should be checked with its child list of checkboxes.<br/> <br/>
+    Again when you click on color checkbox child list should be hidden and its child checkboxes should get deselected(clear state). <br/><br/>
+    Same with movies, drink and bikes.<br/><br/>
+movies: [Dar, Sir]
+drinks: [coke, pepsi, dew]
+bikes: [V-rod, pulsar, cbz]<br/><br/>
+
+Remember: When you click on a parent checkbox and if child list checkboxes are out of visible area the div's scrollbars should scroll and child list should be visible automatically. 
+We should not scroll the div to see them(child list of checkboxes).</p>
+
+
+    
+    <div id="one">
+    <input type="checkbox" class="Color" value="Color" id="Color"  onchange = "selectFunction ();"> <label for = "Color"> Color </label> <br/>
+    <input type="checkbox" class="mini" value="Red" id="Red"> <label class="miniLabel" for = "Red"> Red </label> 
+    <input type="checkbox" class="mini" value="Yellow" id="Yellow"> <label class="miniLabel" for = "Yellow"> Yellow </label> 
+    <input type="checkbox" class="mini" value="Green" id="Green"> <label class="miniLabel" for = "Green"> Green </label> 
+    <input type="checkbox" class="mini" value="Blue" id="Blue"> <label class="miniLabel" for = "Blue"> Blue </label> <br/>
+    
+    
+    <input type="checkbox" class="Movies" value="Movies" id="Movies"  onchange = "selectFunctionOne ();"> <label for = "Movies"> Movies </label> <br/>
+    <input type="checkbox" class="miniOne" value="Dar" id="Dar"> <label class="miniLabelOne" for = "Dar"> Dar </label> 
+    <input type="checkbox" class="miniOne" value="Sir" id="Sir"> <label class="miniLabelOne" for = "Sir"> Sir </label> <br/>
+    
+    
+    
+    <input type="checkbox" class="Drinks" value="Drinks" id="Drinks"  onchange = "selectFunctionTwo ();"> <label for = "Drinks"> Drinks </label> <br/>
+    <input type="checkbox" class="miniTwo" value="Coke" id="Coke"> <label class="miniLabelTwo" for = "Coke"> Coke </label> 
+    <input type="checkbox" class="miniTwo" value="Pepsi" id="Pepsi"> <label class="miniLabelTwo" for = "Pepsi"> Pepsi </label> 
+    <input type="checkbox" class="miniTwo" value="Dew" id="Dew"> <label class="miniLabelTwo" for = "Dew"> Dew </label><br/>
+
+    
+    
+    <input type="checkbox" class="Bikes" value="Bikes" id="Bikes"  onchange = "selectFunctionThree ();"> <label for = "Bikes"> Bikes </label> <br/>
+    <input type="checkbox" class="miniThree" value="VRod" id="VRod"> <label class="miniLabelThree" for = "VRod"> VRod </label> 
+    <input type="checkbox" class="miniThree" value="Pulsar" id="Pulsar"> <label class="miniLabelThree" for = "Pulsar"> Pulsar </label> 
+    <input type="checkbox" class="miniThree" value="CBZ" id="CBZ"> <label class="miniLabelThree" for = "CBZ"> CBZ </label> 
+   
+    
+    
+    
+    </div>   
+    </body>
+    
+    <script>
+	   //COLOR
+    
+    var y = document.getElementsByClassName("mini");
+    var x = document.getElementById('Color');
+    var z = document.getElementsByClassName('miniLabel');
+    
+    
+    function selectFunction () {
+    
+    if (x.checked==true){
+              
+
+       for (var i = 0; i < y.length; i++) {
+       
+       y[i].checked=false;
+       }
+       }
+         
+         // COLOR LABELS
+             for (var i = 0; i < z.length; i ++) {
+    
+    
+    
+    
+    
+    if (x.checked == false) {
+        z[i].style.visibility = 'hidden';
+        
+        
+      }
+      if (x.checked == true) {
+        z[i].style.visibility = 'visible';
+        
+      }
+      
+        else {
+        
+      z[i].style.visibility = 'hidden';
+      
+      }
+      
+        
+        }
+    
+    
+    // COLOR CHECKBOXES
+    
+    for (var i = 0; i < y.length; i ++) {
+    
+    
+    
+    
+    
+    if (x.checked == false) {
+        y[i].style.visibility = 'hidden';
+        
+        
+      }
+      if (x.checked == true) {
+        y[i].style.visibility = 'visible';
+        
+      }
+      
+        else {
+        
+      y[i].style.visibility = 'hidden';
+      
+      }
+      
+        
+        }
+        
+    }
+    
+    selectFunction ();
+    
+    // END COLOR
+    
+    
+    
+    //MOVIES
+    
+    var b = document.getElementsByClassName("miniOne");
+    var a = document.getElementById('Movies');
+    var c = document.getElementsByClassName('miniLabelOne');
+    
+    
+    function selectFunctionOne () {
+    
+    if (a.checked==true){
+              
+
+       for (var i = 0; i < b.length; i++) {
+       
+       b[i].checked=false;
+       }
+       }
+         
+         // MOVIES LABELS
+             for (var i = 0; i < c.length; i ++) {
+    
+    
+    
+    
+    
+    if (a.checked == false) {
+        c[i].style.visibility = 'hidden';
+        
+        
+      }
+      if (a.checked == true) {
+        c[i].style.visibility = 'visible';
+        
+      }
+      
+        else {
+        
+      c[i].style.visibility = 'hidden';
+      
+      }
+      
+        
+        }
+    
+    
+    // MOVIES CHECKBOXES
+    
+    for (var i = 0; i < b.length; i ++) {
+    
+    
+    
+    
+    
+    if (a.checked == false) {
+        b[i].style.visibility = 'hidden';
+        
+        
+      }
+      if (a.checked == true) {
+        b[i].style.visibility = 'visible';
+        
+      }
+      
+        else {
+        
+      b[i].style.visibility = 'hidden';
+      
+      }
+      
+        
+        }
+        
+    }
+    
+    selectFunctionOne ();
+    
+    // END MOVIES
+    
+    
+     //DRINKS
+    
+    var q = document.getElementsByClassName("miniTwo");
+    var p = document.getElementById('Drinks');
+    var r = document.getElementsByClassName('miniLabelTwo');
+    
+    
+    function selectFunctionTwo () {
+    
+    if (p.checked==true){
+              
+
+       for (var i = 0; i < q.length; i++) {
+       
+       q[i].checked=false;
+       }
+       }
+         
+         // DRINKS LABELS
+             for (var i = 0; i < r.length; i ++) {
+    
+    
+    
+    
+    
+    if (p.checked == false) {
+        r[i].style.visibility = 'hidden';
+        
+        
+      }
+      if (p.checked == true) {
+        r[i].style.visibility = 'visible';
+        
+      }
+      
+        else {
+        
+      r[i].style.visibility = 'hidden';
+      
+      }
+      
+        
+        }
+    
+    
+    // DRINKS CHECKBOXES
+    
+    for (var i = 0; i < q.length; i ++) {
+    
+    
+    
+    
+    
+    if (p.checked == false) {
+        q[i].style.visibility = 'hidden';
+        
+        
+      }
+      if (p.checked == true) {
+        q[i].style.visibility = 'visible';
+        
+      }
+      
+        else {
+        
+      q[i].style.visibility = 'hidden';
+      
+      }
+      
+        
+        }
+        
+    }
+    
+    selectFunctionTwo ();
+    
+    // END DRINKS
+    
+    //BIKES
+    
+    var m = document.getElementsByClassName("miniThree");
+    var l = document.getElementById('Bikes');
+    var n = document.getElementsByClassName('miniLabelThree');
+    
+    
+    function selectFunctionThree () {
+    
+    if (l.checked==true){
+              
+
+       for (var i = 0; i < m.length; i++) {
+       
+       m[i].checked=false;
+       }
+       }
+         
+         // BIKES LABELS
+             for (var i = 0; i < n.length; i ++) {
+    
+    
+    
+    
+    
+    if (l.checked == false) {
+        n[i].style.visibility = 'hidden';
+        
+        
+      }
+      if (l.checked == true) {
+        n[i].style.visibility = 'visible';
+        
+      }
+      
+        else {
+        
+      n[i].style.visibility = 'hidden';
+      
+      }
+      
+        
+        }
+    
+    
+    // BIKES CHECKBOXES
+    
+    for (var i = 0; i < m.length; i ++) {
+    
+    
+    
+    
+    
+    if (l.checked == false) {
+        m[i].style.visibility = 'hidden';
+        
+        
+      }
+      if (l.checked == true) {
+        m[i].style.visibility = 'visible';
+        
+      }
+      
+        else {
+        
+      m[i].style.visibility = 'hidden';
+      
+      }
+      
+        
+        }
+        
+    }
+    
+    selectFunctionThree ();
+    
+    // END BIKES
+    
+  
+    
+ 
+    </script>
+    
+  </html>
