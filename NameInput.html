@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<title> Prompt Box-Name </title>
+</head>
+<body>
+
+<script>
+(function abc () {
+     var x = prompt("Please enter your first name", "");
+     var y = prompt("Please enter your last name", " ");
+    
+      if (x== null || y==null ||x==""||y=="") {
+        abc ();
+      
+      }
+      else {
+      
+       alert("Hello " + x + " " + y );
+       document.write("Hello " + x + " " + y );
+      }
+    
+    
+})();
+
+</script>
+</body>
+
+
+
+
+</html>
