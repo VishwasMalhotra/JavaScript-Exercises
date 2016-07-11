@@ -1,0 +1,156 @@
+<html>
+<head>
+<title> JavaScript - Form Validation </title>
+<style>
+*{margin: 0;
+padding: 0;}
+#header {
+          width: 58.75%;
+          height: 10%;
+          background-color: #3CB371;
+          text-align: center;
+          text-size:250px;
+          margin-left:20%;
+          margin-right:20%;
+          padding: 9px 9px 9px 9px;
+          font-family:"Times New Roman", Georgia, Serif;
+          font-size: 40px;
+          
+          
+          
+}
+
+#main {
+        	background-color:98FB98;
+          width: 60%;
+          
+          text-align: Left;
+          font-size: 20px;
+          margin-left:20%;
+          margin-right:20%;
+          font-family:"Times New Roman", Georgia, Serif;
+          font-size: 40px;
+}
+
+#txt {
+      padding: 50px 50px 50px 50px;
+      font-size: 20px;
+      font-family:"Times New Roman", Georgia, Serif;
+      height: 90%;
+
+}
+#inhead {
+
+
+
+}
+span {
+      text-align:center;
+}
+.bn{
+    text-align: center;
+}
+
+.button {
+    position: relative;
+    top: 50%;
+    width:50;
+    height:20;
+}
+.in {
+padding: 10px 10px 10px 10px;
+margin-left: 30%;
+width: 200px;
+}
+
+.inll {
+display: inline-block;
+width: 15%;
+height: 2%;
+
+}
+.intxt {
+margin-left:0%;
+ width=400px;
+padding: 10px 10px 10px 10px;
+
+}
+
+
+</style>
+</head>
+
+<body>
+
+<div id="header">
+
+Registeration Form
+
+</div>
+
+
+
+<div id="main">
+<div id="txt">
+<form  onsubmit="validateForm();">
+<table>
+
+
+	
+		<label class="inll" for="E-mail">E-mail</label>
+		<input class="in" type="text" id="E-mail"></br></br>
+    
+ 
+       
+      <label class="inll" for="Homepage">Homepage</label>
+		<input class="in" type="text" name="Homepage" id="Homepage"></br></br>
+    
+
+  
+   <div class="bn">
+    <input class="button" type="submit" value="Go">
+    </div>
+ </form>
+
+
+
+
+
+</div>
+ </div>
+
+</body>
+
+<script>
+function validateForm() {
+    var x = document.getElementById("E-mail");
+    var y = document.getElementById("Homepage");
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    var urlformat = /^(http|ftp|https):\/\/[\w-]+(\.[\w-]+)+([\w.,@?^=%&amp;:/~+#-]*[\w@?^=%&amp;/~+#-])?$/;
+    
+    if (mailformat.test(x.value) && urlformat.test(y.value)) {
+        
+        return true;
+    }
+else {
+  if(mailformat.test(x.value)==false && urlformat.test(y.value)==false){
+    alert("Enter valid entries");
+  }
+  else if(mailformat.test(x.value) == false){
+  alert("Invalid Email");
+  }
+  else{
+    alert("invalid URL");
+  }
+  
+}
+    
+  
+}
+
+</script>
+
+
+
+
+</html>
