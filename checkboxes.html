@@ -1,0 +1,77 @@
+<!DOCUMENT html>
+  <html>
+    <head>
+      <title>
+      JavaScript - Exercise (Checkbox)
+      </title>
+    </head>
+    <body>
+    <div >
+    <h3> Please select any three options:</h3>
+    <form>
+    <input type="checkbox" class="day" value="Monday" id="Monday" onclick="selectFunction ();"><label for = "Monday"> Monday </label> <br/><br/>
+    <input type="checkbox" class="day" value="Tuesday" id="Tuesday" onclick="selectFunction ();"><label for = "Tuesday"> Tuesday </label> <br/><br/>
+    <input type="checkbox" class="day" value="Wednesday" id="Wednesday" onclick="selectFunction ();"><label for = "Wednesday"> Wednesday </label> <br/><br/>
+    <input type="checkbox" class="day" value="Thursday" id="Thursday" onclick="selectFunction ();"><label for = "Thursday"> Thursday </label> <br/><br/>
+    <input type="checkbox" class="day" value="Friday" id="Friday" onclick="selectFunction ();"><label for = "Friday"> Friday </label> <br/><br/>
+    <input type="checkbox" class="day" value="Saturday" id="Saturday" onclick="selectFunction ();"><label for = "Saturday"> Saturday </label> <br/><br/>
+    <input type="checkbox" class="day" value="Sunday" id="Sunday" onclick="selectFunction ();"><label for = "Sunday"> Sunday </label> <br/><br/>
+    <input type="checkbox" class="None" value="None" id="None" onclick="selectNoneFunction ();"><label for = "None"> None </label> <br/><br/>
+    <input type="submit" value="Submit"><br/><br/>
+    <form>
+    <div>
+    </body>
+    
+    <script>
+	       function selectFunction () {
+          var r = 0;
+          var k = document.getElementsByClassName("day");
+          var v = document.getElementById("None");
+          
+            for (var i = 0; i < k.length; i++) {
+            
+              if (k[i].checked==true) {
+                v.checked=false;
+                r++;  
+                
+              }
+              if (r > 3){
+                k[i].checked=false;
+                alert("You've already selected 3 options.");
+              }
+       
+              
+              if (r > 3){
+                break;                    
+              }
+              
+            
+              
+              
+        }
+        }
+        
+       function selectNoneFunction () {
+          var v = document.getElementById("None");
+          var k = document.getElementsByClassName("day");
+                  
+              if (v.checked==true){
+              
+
+       for (var i = 0; i < k.length; i++) {
+       
+       k[i].checked=false;
+       }
+       }
+     }
+          
+        
+         
+  
+    </script>
+    
+    
+    
+    
+    
+  </html>
